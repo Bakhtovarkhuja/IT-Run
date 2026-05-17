@@ -8,9 +8,8 @@ export default function Footer() {
 	return (
 		<div
 			className='text-white
-			w-300 m-auto
-	rounded-2xl
-	px-4 py-2 flex flex-col gap-3'
+			max-w-300 m-auto
+	rounded-2xl py-2 flex flex-col gap-3'
 		>
 			<div className='flex items-center justify-between'>
 				<div>
