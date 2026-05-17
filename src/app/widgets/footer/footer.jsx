@@ -10,7 +10,7 @@ export default function Footer (){
 				<div>
 					<Image className='w-17.5' src={logo} alt="logo"></Image>
 				</div>
-				<ul className='flex items-center gap-[17px] text-gray-400'>
+				<ul className='flex items-center gap-4.25 text-gray-400'>
 					<li>Курсы</li>
 					<li>О нас</li>
 					<li>Студентам</li>
