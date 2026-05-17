@@ -1,5 +1,7 @@
-export default function Container({children}){
+export default function Container({ children }) {
 	return (
-		<div className='max-w-300 m-auto'>{children}</div>
+		<div className='w-300 m-auto'>
+			{children}
+		</div>
 	)
 }
