@@ -6,8 +6,8 @@ import Link from 'next/link'
 
 export default function Header() {
 	return (
-		<div className='fixed top-0 right-0 left-0 
-bg-white/10
+		<div className='fixed top-0 right-0 left-0 py-2 
+bg-white/0
 backdrop-blur-xl
 shadow-2xl
 '>

@@ -3,7 +3,7 @@ export default function Button({ children }) {
 		<div
 			className="
 				inline-block
-				rounded-lg
+				rounded-lg hover:scale-105 duration-300
 				p-px
 				bg-[linear-gradient(90deg,rgb(5,3,18),gray,white,gray,rgb(5,3,18))]
 				bg-size-[300%_300%]
