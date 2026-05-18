@@ -1,8 +1,22 @@
 @import "tailwindcss";
 
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+.dark {
+  --background: linear-gradient(to right,#070c19,  #070c19);
+  --foreground: #f8fafc;
+}
+
 body {
-  color: white;
-  background: linear-gradient(to right, rgb(0, 20, 39), rgb(24, 3, 43), rgb(0, 20, 39));
+  background: var(--background);
+  color: var(--foreground);
+
+  transition:
+    background 0.3s,
+    color 0.3s;
 }
 
 @keyframes gradientMove {

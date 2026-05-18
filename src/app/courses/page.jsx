@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Button2 from "../components/buttons/button2"; 
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
 
 
@@ -236,6 +238,15 @@ export default function Page() {
 						<CourseCard key={course.id} course={course} index={i} />
 					))}
 				</div>
+			</div>
+
+			<div className="my-20 border rounded-2xl border-white/8 bg-gradient-to-br from-white/[0.04
+	backdrop-blur-xl flex items-center justify-between px-10 py-7">
+				<div>
+					<span className="text-2xl sm:text-5xl lg:text-3xl font-bold text-foreground leading-tight mb-6 text-white">Поможем выбрать направление в IT</span><br />
+					<span className="text-[gray]">Пройдите тест и получите персональную рекомендацию</span>
+				</div>
+				<Button2> <span className="my-2 mx-5"> Пройти тест <ArrowForwardIcon/></span> </Button2>
 			</div>
 
 
