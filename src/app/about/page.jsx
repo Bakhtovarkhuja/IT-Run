@@ -142,66 +142,13 @@ export default function Page() {
       `}</style>
 
       {/* ── HERO ── */}
-      <section ref={heroRef} className="relative z-10 pt-20 pb-24 sm:pt-28 sm:pb-32">
-        <div className="max-w-300 mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-
-            <div className={`reveal ${heroIn ? "in" : ""}`}>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-cyan-500/25 bg-cyan-500/8 text-cyan-400 text-xs font-semibold mb-6 uppercase tracking-widest">
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-                С 2020 года · Худжанд & Душанбе
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 text-white">
-                Программирование —
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-900 bg-clip-text text-transparent">
-                  язык будущего
-                </span>
-              </h1>
-              <p className="text-slate-400 text-lg leading-relaxed mb-8 max-w-xl">
-                Умение программировать так же важно, как умение читать. Это требование рынка и нового мира. <strong className="text-slate-200">«Новый Алгоритм»</strong> — это место, где молодёжь Таджикистана открывает для себя IT.
-              </p>
-            </div>
-
-
-            <div className={`reveal ${heroIn ? "in" : ""} hidden lg:flex items-center justify-center`} style={{ transitionDelay: "150ms" }}>
-              <div className="relative w-[380px] h-[380px]">
-
-                <div className="absolute inset-0 rounded-full border border-white/5 spin-slow" />
-                <div className="absolute inset-6 rounded-full border border-cyan-500/15 spin-slow" style={{ animationDirection: "reverse", animationDuration: "15s" }} />
-                <div className="absolute inset-12 rounded-full border border-violet-500/15 spin-slow" style={{ animationDuration: "25s" }} />
-
-
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="float w-52 rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-transparent backdrop-blur-sm p-6 text-center shadow-2xl shadow-black/50">
-                    <div className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <span> <Image src={logo} /> </span>
-                    </div>
-                    <div className="syne font-black text-white text-lg mb-1">IT Run</div>
-                    <div className="syne font-black text-cyan-400 text-lg">Академия</div>
-                    <div className="mt-3 text-xs text-slate-500">IT Academy · с 2020</div>
-                  </div>
-                </div>
-
-
-                {[
-                  { label: "1500+ учеников", top: "4%", left: "50%", color: "bg-cyan-500/20 border-cyan-500/30 text-cyan-400" },
-                  { label: "150+ трудоуст.", top: "50%", left: "90%", color: "bg-amber-500/20 border-amber-500/30 text-amber-400" },
-                  { label: "2 центра", top: "88%", left: "50%", color: "bg-violet-500/20 border-violet-500/30 text-violet-400" },
-                  { label: "6 года", top: "50%", left: "2%", color: "bg-emerald-500/20 border-emerald-500/30 text-emerald-400" },
-                ].map((b) => (
-                  <div key={b.label} className={`absolute text-xs font-semibold px-3 py-1.5 rounded-full border ${b.color} -translate-x-1/2 -translate-y-1/2 whitespace-nowrap`} style={{ top: b.top, left: b.left }}>
-                    {b.label}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── STATS ── */}
-      <section className='max-w-300 mx-auto flex items-center justify-between border rounded-2xl border-white/8 bg-gradient-to-br from-white/[0.04 backdrop-blur-xl px-18 py-5'>
+
+      {/* ── MISSION ── */}
+      <MissionSection />
+      {/* <section className='max-w-300 mx-auto flex items-center justify-between border rounded-2xl border-white/8 bg-gradient-to-br from-white/[0.04 backdrop-blur-xl px-18 py-5'>
         {
           stats.map((e, index) => {
             return (
@@ -221,10 +168,7 @@ export default function Page() {
             )
           })
         }
-      </section>
-
-      {/* ── MISSION ── */}
-      <MissionSection />
+      </section> */}
 
       {/* ── TIMELINE ── */}
       <TimelineSection />
@@ -244,23 +188,23 @@ function MissionSection() {
       <div className="max-w-300 mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section label */}
         <div className={`reveal ${inView ? "in" : ""} flex items-center gap-3 mb-12`}>
-          <span className="w-8 h-px bg-cyan-500" />
-          <span className="text-cyan-400 text-xs font-bold uppercase tracking-widest">Наша миссия</span>
+          <span className="w-8 h-px bg-[#ff7b00]" />
+          <span className="text-[#ff7b00] font-bold uppercase tracking-widest">Наша миссия</span>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Big quote */}
           <div className={`reveal ${inView ? "in" : ""}`} style={{ transitionDelay: "100ms" }}>
             <blockquote className="relative">
-              <svg className="absolute -top-4 -left-2 w-12 h-12 text-cyan-500/20" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="absolute -top-7 -z-1 -left-8 w-12 h-12 text-[#ff7b00af]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
               </svg>
-              <p className="syne text-3xl sm:text-4xl font-black text-white leading-tight pl-6">
+              <p className="text-3xl sm:text-4xl text-[black] dark:text-[white] font-bold  pl-6">
                 За программированием —
-                <span className="text-cyan-400">будущее.</span>
+                <span className="text-[#ff7b00af]">будущее</span> <span>{`/>`}</span>
               </p>
             </blockquote>
-            <p className="text-slate-400 leading-relaxed mt-8 text-base sm:text-lg">
+            <p className="text-[gray] dark:text-slate-400 leading-relaxed mt-8 text-base sm:text-lg">
               Основная цель ООО «Новый Алгоритм» — развитие логики, глубокое понимание IT и подготовка юных кадров с последующим трудоустройством. Мы даём молодёжи навыки программирования, потому что это требование нового мира.
             </p>
 
@@ -272,10 +216,10 @@ function MissionSection() {
                 { icon: "🌐", text: "Встречи в университетах и школах города" },
                 { icon: "🤝", text: "Гранты и международные проекты" },
               ].map((item) => (
-                <div key={item.text} className="flex items-start gap-3 p-4 border rounded-2xl border-white/8 from-white/[0.04
-	backdrop-blur-xl hover:border-white/15 transition-colors">
+                <div key={item.text} className="flex items-start gap-3 p-4 border rounded-2xl bg-[#ffffff] dark:bg-[#ffffff00] border-[gray] dark:border-white/8 from-white/[0.04
+	backdrop-blur-xl dark:hover:border-white/15 transition-colors">
                   <span className="text-xl">{item.icon}</span>
-                  <span className="text-slate-400 text-sm leading-snug">{item.text}</span>
+                  <span className="text-[black] dark:text-slate-400 text-sm leading-snug">{item.text}</span>
                 </div>
               ))}
             </div>
@@ -283,20 +227,18 @@ function MissionSection() {
 
           {/* Story text */}
           <div className={`reveal ${inView ? "in" : ""} space-y-5`} style={{ transitionDelay: "200ms" }}>
-            <div className="p-6 border rounded-2xl border-white/8  from-white/[0.04] backdrop-blur-xl">
-              <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
+            <div className="p-6 border bg-[white] dark:bg-[#ffffff00] border-[gray] rounded-2xl dark:border-white/8  from-white/[0.04] backdrop-blur-xl">
+              <p className="text-[black] dark:text-slate-300 leading-relaxed text-sm sm:text-base">
                 ООО «Новый Алгоритм» в марте 2020 года, на пике пандемии COVID-19, начала свою деятельность в области детского программирования в г. Худжанде. Показывая хорошие результаты и войдя в доверие родителей и детей, уже в августе 2020 года открыла филиал в г. Душанбе.
               </p>
             </div>
-            <div className="p-6 border rounded-2xl border-white/8  from-white/[0.04
-	backdrop-blur-xl">
-              <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
-                До сегодняшнего дня у нас обучались более <strong className="text-violet-400">1500 учеников-подростков</strong>, более <strong className="text-violet-400">300 человек</strong> получили профессиональные знания по направлениям PHP, Android, C#, Python, WordPress, Figma и Data Analytics.
+            <div className="p-6 border bg-[white] dark:bg-[#ffffff00] border-[gray] rounded-2xl dark:border-white/8  from-white/[0.04] backdrop-blur-xl">
+              <p className="text-[black] dark:text-slate-300 leading-relaxed text-sm sm:text-base">
+                До сегодняшнего дня у нас обучались более <strong className="text-[#ff7b00af]">1500 учеников-подростков</strong>, более <strong className="text-[#ff7b00af]">300 человек</strong> получили профессиональные знания по направлениям PHP, Android, C#, Python, WordPress, Figma и Data Analytics.
               </p>
             </div>
-            <div className="p-6 border rounded-2xl border-white/8  from-white/[0.04
-	backdrop-blur-xl">
-              <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
+            <div className="p-6 border bg-[white] dark:bg-[#ffffff00] border-[gray] rounded-2xl dark:border-white/8  from-white/[0.04] backdrop-blur-xl">
+              <p className="text-[black] dark:text-slate-300 leading-relaxed text-sm sm:text-base">
                 Начиная с мая 2021 года мы стали сотрудничать с международными организациями и реализовали несколько проектов по предоставлению ИТ. Спрос на обучение программированию среди молодёжи растёт с каждым днём.
               </p>
             </div>
@@ -311,20 +253,20 @@ function MissionSection() {
 function TimelineSection() {
   const [ref, inView] = useInView(0.1);
   return (
-    <section ref={ref} className="relative z-10 py-20 sm:py-2">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={ref} className=" darkBg relative z-10 py-20 sm:py-20">
+      <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className={`reveal ${inView ? "in" : ""} text-center mb-16`}>
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-slate-400 text-xs font-semibold uppercase tracking-widest mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#ff7b00] dark:border-white/10 bg-white/5 text-[black] dark:text-slate-400 text-xs font-semibold uppercase tracking-widest mb-4">
             История
           </div>
-          <h2 className="syne text-3xl sm:text-4xl font-black text-white">
+          <h2 className="syne text-3xl sm:text-4xl font-black text-[black] dark:text-[white] ">
             Наш путь
           </h2>
         </div>
 
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+          <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-[#ff7b00] dark:bg-[white]" />
 
           <div className="space-y-12">
             {timeline.map((item, i) => (
@@ -338,8 +280,8 @@ function TimelineSection() {
                   <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold border mb-3 ${item.color}`}>
                     {item.year}
                   </div>
-                  <h3 className="syne font-black text-white text-xl mb-2">{item.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed max-w-sm">{item.text}</p>
+                  <h3 className="syne font-black text-[black] dark:text-white text-xl mb-2">{item.title}</h3>
+                  <p className=" text-[gray] dark:text-slate-400 text-sm leading-relaxed max-w-sm">{item.text}</p>
                 </div>
 
                 {/* Dot */}
@@ -366,11 +308,11 @@ function PartnersSection({ partners, employers }) {
     <section ref={ref} className="relative z-10 py-20 sm:py-28 bg-gradient-to-b from-transparent via-white/[0.015] to-transparent">
       <div className="max-w-300 mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`reveal ${inView ? "in" : ""} text-center mb-16`}>
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-slate-400 text-xs font-semibold uppercase tracking-widest mb-4">
-            Экосистема
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#ff7b00] dark:border-white/10 bg-white/5 text-[black] dark:text-slate-400 text-xs font-semibold uppercase tracking-widest mb-4">
+            ЭКОСИСТЕМА
           </div>
-          <h2 className="syne text-3xl sm:text-4xl font-black text-white mb-4">Наши партнёры</h2>
-          <p className="text-slate-400 max-w-lg mx-auto">
+          <h2 className="syne text-3xl sm:text-4xl font-black text-[black] dark:text-white mb-4">Наши партнёры</h2>
+          <p className="text-[gray] dark:text-slate-400 max-w-lg mx-auto">
             Мы работаем с ведущими IT-организациями, банками и международными фондами Таджикистана
           </p>
         </div>
@@ -378,8 +320,8 @@ function PartnersSection({ partners, employers }) {
         <div className="grid md:grid-cols-2 gap-10">
           {/* Strategic partners */}
           <div className={`reveal ${inView ? "in" : ""}`} style={{ transitionDelay: "100ms" }}>
-            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
-              <span className="w-4 h-px bg-cyan-500" /> Стратегические партнёры
+            <h3 className="text-sm font-bold text-[blue] dark:text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+              <span className="w-4 h-px bg-[blue] dark:bg-cyan-500" /> Стратегические партнёры
             </h3>
             <div className="space-y-2">
               {partners.map((p) => (

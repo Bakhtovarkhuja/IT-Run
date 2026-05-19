@@ -42,11 +42,9 @@ backdrop-blur-xl
 						<li>Контакты</li>
 					</Link>
 				</ul>
-				<div>
+				<div className='flex  gap-4'>
 					<ThemeToggle />
-				</div>
-				<div className='flex gap-4'>
-					<Button>Войти</Button>
+					{/* <Button>Войти</Button> */}
 					<Button2>Оставить заявку</Button2>
 				</div>
 			</nav>
