@@ -6,105 +6,44 @@ import { Autoplay, FreeMode } from 'swiper/modules'
 import Button from './components/buttons/button1'
 import Button2 from './components/buttons/button2'
 import Image from 'next/image'
-import bg from '@/app/photos/heroSectionPhoto.png'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import PeopleIcon from '@mui/icons-material/People'
 import MovingIcon from '@mui/icons-material/Moving'
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight'
 import HandshakeIcon from '@mui/icons-material/Handshake'
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 import MenuBookIcon from '@mui/icons-material/MenuBook'
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium'
 import FolderIcon from '@mui/icons-material/Folder'
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter'
 import RoadCard from '@/app/components/roadCard/roadCard'
 import StudentCard from '@/app/components/studentCard/studentCard'
-import itrun from '@/app/photos/itrun.png'
+import it from '@/app/photos/logo3.png'
 import eskhata from '@/app/photos/eskhata.png'
 import alif from '@/app/photos/alif.png'
 import wilddberis from '@/app/photos/widdberis.png'
 import avito from '@/app/photos/avito.png'
 import ds from '@/app/photos/ds.png'
-import logo from "@/app/photos/logo3.png"
-
+import logo from '@/app/photos/logo3.png'
 
 export default function Home() {
-
 	return (
 		<div className='max-w-300 m-auto mt-35 mb-10 flex flex-col gap-10'>
-			{/* <header className='flex '>
-				<aside className='w-[50%]'>
-					<div className='inline-flex items-center gap-2 rounded-full bg-[rgb(5, 3, 18)] border border-[rgb(163,14,108)] px-4 py-1.5 mb-6 text-white'>
-						<span className='text-primary text-[rgb(163,14,108)] text-sm font-medium flex items-center gap-1.5'>
-							<FiberManualRecordIcon
-								sx={{ fontSize: 12 }}
-							></FiberManualRecordIcon>
-							<span>№1 IT-академия в Таджикистане</span>
-						</span>
-					</div>
-
-					<h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 text-white'>
-						Построй карьеру в IT вместе с{' '}
-						<span className='text-primary text-[rgb(163,14,108)]'>
-							новым поколением
-						</span>
-					</h1>
-
-					<p className='text-lg text-[gray] text-muted-foreground mb-8 max-w-lg'>
-						От первого кода до первой работы в tech.
-					</p>
-
-					<div className='flex flex-wrap gap-4 mb-10'>
-						<Button2>
-							Начать обучение
-							<ArrowForwardIcon></ArrowForwardIcon>
-						</Button2>
-						<Button>Смотреть программы</Button>
-					</div>
-
-					<div className='flex items-center gap-4'>
-						<div className='flex -space-x-2'>
-							{[1, 2, 3, 4, 5].map(i => (
-								<div
-									key={i}
-									className='w-10 h-10 rounded-full bg-gradient-to-br from-primary/40 to-primary/20 border-2 border-background flex items-center justify-center text-xs font-medium text-foreground text-white'
-								>
-									{String.fromCharCode(64 + i)}
-								</div>
-							))}
-						</div>
-						<div>
-							<p className='text-sm text-white font-medium text-foreground'>
-								{'1000+ студентов уже с нами'}
-							</p>
-							<p className='text-xs text-[gray] text-muted-foreground'>
-								{'95% трудоустройство наших выпускников'}
-							</p>
-						</div>
-					</div>
-				</aside>
-				<aside className='w-[50%]'>
-					<Image className='' src={bg} alt='olimjon'></Image>
-				</aside>
-			</header> */}
 			<section>
-				<div className="max-w-300 mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="grid lg:grid-cols-2 gap-16 items-center">
+				<div className='max-w-300 mx-auto px-4 sm:px-6 lg:px-8'>
+					<div className='grid lg:grid-cols-2 gap-16 items-center'>
 						<div>
-							<div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-amber-600 dark:border-cyan-500/25 dark:bg-cyan-500/8 dark:text-cyan-400 text-xs font-semibold mb-6 uppercase tracking-widest">
-								<span className="w-1.5 h-1.5 rounded-full bg-amber-600 dark:bg-cyan-400 animate-pulse" />
+							<div className='inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-amber-600 dark:border-cyan-500/25 dark:bg-cyan-500/8 dark:text-cyan-400 text-xs font-semibold mb-6 uppercase tracking-widest'>
+								<span className='w-1.5 h-1.5 rounded-full bg-amber-600 dark:bg-cyan-400 animate-pulse' />
 								С 2020 года · Худжанд & Душанбе
 							</div>
-							<h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
+							<h1 className='text-4xl sm:text-5xl lg:text-5xl font-bold text-foreground leading-tight mb-6'>
 								Программирование —
-								<span className="bg-gradient-to-r text-[#ff7b00] bg-clip-text ">
+								<span className='bg-gradient-to-r text-[#ff7b00] bg-clip-text '>
 									{`язык будущего`}
 								</span>
-								<span>
-									{`/>`}
-								</span>
+								<span>{`/>`}</span>
 							</h1>
-							<p className="text-slate-400 text-lg leading-relaxed mb-8 max-w-xl">
+							<p className='text-slate-400 text-lg leading-relaxed mb-8 max-w-xl'>
 								{/* Умение программировать так же важно, как умение читать. Это требование рынка и нового мира. <strong className='text-black dark:text-[white]'>«Новый Алгоритм»</strong> — это место, где молодёжь Таджикистана открывает для себя IT. */}
 								От первого кода до первой работы в tech.
 							</p>
@@ -137,35 +76,79 @@ export default function Home() {
 								</div>
 							</div>
 						</div>
-						<div className={`reveal hidden lg:flex items-center justify-center`} style={{ transitionDelay: "150ms" }}>
-							<div className="relative w-[380px] h-[380px]">
+						<div
+							className={`reveal hidden lg:flex items-center justify-center`}
+							style={{ transitionDelay: '150ms' }}
+						>
+							<div className='relative w-[380px] h-[380px]'>
+								<div className='absolute -inset-6 rounded-full border border-[#70707083] dark:border-white/5 spin-slow' />
+								<div className='absolute inset-0 rounded-full border border-[#4d444481] dark:border-white/5 spin-slow' />
+								<div
+									className='absolute inset-6 rounded-full border border-[#8a313170] dark:border-cyan-500/15 spin-slow'
+									style={{
+										animationDirection: 'reverse',
+										animationDuration: '15s',
+									}}
+								/>
+								<div
+									className='absolute inset-12 rounded-full border border-[#8000807e] dark:border-violet-500/15 spin-slow'
+									style={{ animationDuration: '25s' }}
+								/>
 
-								<div className="absolute -inset-6 rounded-full border border-[#70707083] dark:border-white/5 spin-slow" />
-								<div className="absolute inset-0 rounded-full border border-[#4d444481] dark:border-white/5 spin-slow" />
-								<div className="absolute inset-6 rounded-full border border-[#8a313170] dark:border-cyan-500/15 spin-slow" style={{ animationDirection: "reverse", animationDuration: "15s" }} />
-								<div className="absolute inset-12 rounded-full border border-[#8000807e] dark:border-violet-500/15 spin-slow" style={{ animationDuration: "25s" }} />
-
-
-								<div className="absolute inset-0 flex items-center justify-center">
-									<div className="float w-60 rounded-4xl border border-white/10 bg-gradient-to-br bg-white/0
-backdrop-blur-xl dark:from-white/8 backdrop-blur-sm p-6 text-center shadow-2xl shadow-black/50">
-										<div className="w-22 h-14 rounded-xl flex items-center justify-center mx-auto mb-4">
-											<span> <Image src={logo} /> </span>
+								<div className='absolute inset-0 flex items-center justify-center'>
+									<div
+										className='float w-60 rounded-4xl border border-white/10 bg-gradient-to-br bg-white/0
+backdrop-blur-xl dark:from-white/8 backdrop-blur-sm p-6 text-center shadow-2xl shadow-black/50'
+									>
+										<div className='w-22 h-14 rounded-xl flex items-center justify-center mx-auto mb-4'>
+											<span>
+												{' '}
+												<Image src={logo} />{' '}
+											</span>
 										</div>
-										<div className="font-bold text-3xl mb-1">IT Run</div>
-										<div className="text-[13px] text-[gray]">Academy</div>
-										<div className="mt-3 text-xs mt-15 text-slate-500">IT Academy · с 2020</div>
+										<div className='font-bold text-3xl mb-1'>IT Run</div>
+										<div className='text-[13px] text-[gray]'>Academy</div>
+										<div className='mt-3 text-xs mt-15 text-slate-500'>
+											IT Academy · с 2020
+										</div>
 									</div>
 								</div>
 
-
 								{[
-									{ label: "1500+ учеников", top: "4%", left: "50%", color: " border-blue-600 bg-white/0 backdrop-blur-xl dark:bg-cyan-500/20 dark:border-cyan-500/30 dark:text-cyan-400" },
-									{ label: "150+ трудоуст.", top: "50%", left: "90%", color: "border-orange-600 bg-white/0 backdrop-blur-xl  dark:bg-amber-500/20 dark:border-amber-500/30 dark:text-amber-400" },
-									{ label: "2 центра", top: "99%", left: "50%", color: "border-purple-600 bg-white/0 backdrop-blur-xl dark:bg-violet-500/20 dark:border-violet-500/30 dark:text-violet-400" },
-									{ label: "6 года", top: "50%", left: "2%", color: "border-green-600 bg-white/0 backdrop-blur-xl dark:bg-emerald-500/20 dark:border-emerald-500/30 dark:text-emerald-400" },
-								].map((b) => (
-									<div key={b.label} className={`absolute text-xs font-semibold px-3 py-1.5 rounded-full border ${b.color} -translate-x-1/2 -translate-y-1/2 whitespace-nowrap`} style={{ top: b.top, left: b.left }}>
+									{
+										label: '1500+ учеников',
+										top: '4%',
+										left: '50%',
+										color:
+											' border-blue-600 bg-white/0 backdrop-blur-xl dark:bg-cyan-500/20 dark:border-cyan-500/30 dark:text-cyan-400',
+									},
+									{
+										label: '150+ трудоуст.',
+										top: '50%',
+										left: '90%',
+										color:
+											'border-orange-600 bg-white/0 backdrop-blur-xl  dark:bg-amber-500/20 dark:border-amber-500/30 dark:text-amber-400',
+									},
+									{
+										label: '2 центра',
+										top: '99%',
+										left: '50%',
+										color:
+											'border-purple-600 bg-white/0 backdrop-blur-xl dark:bg-violet-500/20 dark:border-violet-500/30 dark:text-violet-400',
+									},
+									{
+										label: '6 года',
+										top: '50%',
+										left: '2%',
+										color:
+											'border-green-600 bg-white/0 backdrop-blur-xl dark:bg-emerald-500/20 dark:border-emerald-500/30 dark:text-emerald-400',
+									},
+								].map(b => (
+									<div
+										key={b.label}
+										className={`absolute text-xs font-semibold px-3 py-1.5 rounded-full border ${b.color} -translate-x-1/2 -translate-y-1/2 whitespace-nowrap`}
+										style={{ top: b.top, left: b.left }}
+									>
 										{b.label}
 									</div>
 								))}
@@ -181,22 +164,57 @@ backdrop-blur-xl dark:from-white/8 backdrop-blur-sm p-6 text-center shadow-2xl s
 	bg-white/5
 	border border-white/20
 	shadow-2xl
-	px-18 py-5'
+	px-18 py-5 mt-6'
 			>
 				<div className='flex items-center gap-4 '>
 					<div
-						className='
-				inline-block
-				rounded-lg
-				p-px hover:rotate-180 duration-700
-				bg-[linear-gradient(90deg,rgb(163,14,108),rgb(147,43,152),rgb(71,21,147),rgb(163,14,108))]
-				bg-size-[300%_300%]
-				animate-[gradientMove_5s_linear_infinite]'
-					>
-						<div className='px-3 py-3 rounded-[7px] bg-[rgb(24,4,34)] text-white'>
-							<PeopleIcon sx={{ fontSize: 35 }}></PeopleIcon>
-						</div>
-					</div>
+	className="
+		group
+		relative
+		w-16
+		h-16
+
+		rounded-2xl
+
+		flex
+		items-center
+		justify-center
+
+		bg-white/5
+		dark:bg-white/5
+
+		border-3
+		border-orange-400/20
+		dark:border-orange-400/30
+
+		backdrop-blur-xl
+
+		shadow-[0_4px_20px_rgba(0,0,0,0.08)]
+
+		hover:border-orange-400/50
+		hover:shadow-[0_0_20px_rgba(251,146,60,0.15)]
+
+		transition-all
+		duration-300
+	"
+>
+	<div
+		className="
+			absolute
+			inset-0
+			rounded-2xl
+			bg-[linear-gradient(135deg,rgba(255,255,255,0.08),transparent)]
+		"
+	/>
+
+	<PeopleIcon
+		sx={{
+			fontSize: 30,
+			color: '#fb923c',
+		}}
+		className="relative z-10"
+	/>
+</div>
 					<div>
 						<p className='text-[38px]'>1,000+</p>
 						<p className='text-[gray] text-[15px] -mt-2'>Выпускников</p>
@@ -364,8 +382,8 @@ backdrop-blur-xl dark:from-white/8 backdrop-blur-sm p-6 text-center shadow-2xl s
 						</div>
 					</div>
 				</aside>
-				<div className='h-0.5 rounded-full w-full bg-[#3a0f4c]'></div>
-				<aside className='flex items-center gap-5'>
+				<hr></hr>
+				<aside className='flex items-center gap-5 h-10'>
 					<p className='text-[gray] w-[26%]'>Наши выпускники работают в:</p>
 					<Swiper
 						modules={[Autoplay, FreeMode]}
@@ -382,38 +400,38 @@ backdrop-blur-xl dark:from-white/8 backdrop-blur-sm p-6 text-center shadow-2xl s
 						className='w-full'
 					>
 						<SwiperSlide>
-							<div className='w-40 h-20 flex items-center justify-center'>
-								<Image className='w-30' src={itrun} alt='itrun' />
+							<div className='w-35 h-15 flex items-center justify-center'>
+								<Image className='w-25' src={it} alt='itrun' />
 							</div>
 						</SwiperSlide>
 
 						<SwiperSlide>
-							<div className='w-40 h-20 flex items-center justify-center'>
-								<Image className='w-40' src={eskhata} alt='eskhata' />
+							<div className='w-35 h-15 flex items-center justify-center'>
+								<Image className='w-35' src={eskhata} alt='eskhata' />
 							</div>
 						</SwiperSlide>
 
 						<SwiperSlide>
-							<div className='w-40 h-20 flex items-center justify-center'>
-								<Image className='w-40' src={wilddberis} alt='wildberries' />
+							<div className='w-35 h-15 flex items-center justify-center'>
+								<Image className='w-35' src={wilddberis} alt='wildberries' />
 							</div>
 						</SwiperSlide>
 
 						<SwiperSlide>
-							<div className='w-40 h-20 flex items-center justify-center'>
-								<Image className='w-40' src={avito} alt='avito' />
+							<div className='w-35 h-15 flex items-center justify-center'>
+								<Image className='w-35' src={avito} alt='avito' />
 							</div>
 						</SwiperSlide>
 
 						<SwiperSlide>
-							<div className='w-40 h-20 flex items-center justify-center'>
-								<Image className='w-40' src={ds} alt='ds' />
+							<div className='w-35 h-15 flex items-center justify-center'>
+								<Image className='w-35' src={ds} alt='ds' />
 							</div>
 						</SwiperSlide>
 
 						<SwiperSlide>
-							<div className='w-40 h-20 flex items-center justify-center'>
-								<Image className='w-40' src={alif} alt='alif' />
+							<div className='w-35 h-15 flex items-center justify-center'>
+								<Image className='w-35' src={alif} alt='alif' />
 							</div>
 						</SwiperSlide>
 					</Swiper>
