@@ -77,6 +77,7 @@ export default function Page() {
 				style={{ border: 0, borderRadius: '15px', marginTop: '40px' }}
 				allowFullScreen=''
 				loading='lazy'
+				className="rounded-2xl mt-10 dark:invert dark:hue-rotate-180"
 			/>
 		</div>
 	)

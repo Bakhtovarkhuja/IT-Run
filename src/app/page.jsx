@@ -24,6 +24,10 @@ import wilddberis from '@/app/photos/widdberis.png'
 import avito from '@/app/photos/avito.png'
 import ds from '@/app/photos/ds.png'
 import logo from '@/app/photos/logo3.png'
+import book from '@/app/photos/book.svg'
+import head from '@/app/photos/head.svg'
+import bag from '@/app/photos/bag.svg'
+import like from '@/app/photos/like.svg'
 
 export default function Home() {
 	return (
@@ -157,130 +161,35 @@ backdrop-blur-xl dark:from-white/8 backdrop-blur-sm p-6 text-center shadow-2xl s
 					</div>
 				</div>
 			</section>
-			<section
-				className='
-	flex items-center justify-between
-	rounded-2xl
-	bg-white/5
-	border border-white/20
-	shadow-2xl
-	px-18 py-5 mt-6'
-			>
-				<div className='flex items-center gap-4 '>
-					<div
-	className="
-		group
-		relative
-		w-16
-		h-16
-
-		rounded-2xl
-
-		flex
-		items-center
-		justify-center
-
-		bg-white/5
-		dark:bg-white/5
-
-		border-3
-		border-orange-400/20
-		dark:border-orange-400/30
-
-		backdrop-blur-xl
-
-		shadow-[0_4px_20px_rgba(0,0,0,0.08)]
-
-		hover:border-orange-400/50
-		hover:shadow-[0_0_20px_rgba(251,146,60,0.15)]
-
-		transition-all
-		duration-300
-	"
->
-	<div
-		className="
-			absolute
-			inset-0
-			rounded-2xl
-			bg-[linear-gradient(135deg,rgba(255,255,255,0.08),transparent)]
-		"
-	/>
-
-	<PeopleIcon
-		sx={{
-			fontSize: 30,
-			color: '#fb923c',
-		}}
-		className="relative z-10"
-	/>
-</div>
-					<div>
-						<p className='text-[38px]'>1,000+</p>
-						<p className='text-[gray] text-[15px] -mt-2'>Выпускников</p>
+			<section className='flex items-stretch gap-5 mt-10'>
+				<card className=" w-full dark:bg-[#070c19] rounded-2xl shadow-2xl px-8 py-5 flex flex-col gap-6">
+					<div className='flex flex-col gap-2'>
+						<b className='text-[38px] text-[orange]'>+4 года</b>
+						<b className='text-[18px]'>Опыт преподавания</b>
 					</div>
-				</div>
-				<div className='flex items-center gap-4 '>
-					<div
-						className='
-				inline-block
-				rounded-lg
-				p-px hover:rotate-180 duration-700
-				bg-[linear-gradient(90deg,rgb(163,14,108),rgb(147,43,152),rgb(71,21,147),rgb(163,14,108))]
-				bg-size-[300%_300%]
-				animate-[gradientMove_5s_linear_infinite]'
-					>
-						<div className='px-3 py-3 rounded-[7px] bg-[rgb(24,4,34)] text-white'>
-							<MovingIcon sx={{ fontSize: 35 }}></MovingIcon>
-						</div>
+					<Image src={book} alt='Book' />
+				</card>
+				<card className=" w-full dark:bg-[#070c19] rounded-2xl shadow-2xl px-8 py-5 flex flex-col gap-6">
+					<div className='flex flex-col gap-2'>
+						<b className='text-[38px] text-[orange]'>+1,000</b>
+						<b className='text-[18px]'>Количество выпускников</b>
 					</div>
-					<div>
-						<p className='text-[38px]'>95%</p>
-						<p className='text-[gray] text-[15px] -mt-2'>Трудоустройство</p>
+					<Image src={head} alt='head' />
+				</card>
+				<card className=" w-full dark:bg-[#070c19] rounded-2xl shadow-2xl px-8 py-5 flex flex-col gap-6">
+					<div className='flex flex-col gap-2'>
+						<b className='text-[38px] text-[orange]'>+74%</b>
+						<b className='text-[18px]'>Трудоустроены в IT-компаниях</b>
 					</div>
-				</div>
-				<div className='flex items-center gap-4 '>
-					<div
-						className='
-				inline-block
-				rounded-lg
-				p-px hover:rotate-180 duration-700
-				bg-[linear-gradient(90deg,rgb(163,14,108),rgb(147,43,152),rgb(71,21,147),rgb(163,14,108))]
-				bg-size-[300%_300%]
-				animate-[gradientMove_5s_linear_infinite]'
-					>
-						<div className='px-3 py-3 rounded-[7px] bg-[rgb(24,4,34)] text-white'>
-							<KeyboardDoubleArrowRightIcon
-								sx={{ fontSize: 35 }}
-							></KeyboardDoubleArrowRightIcon>
-						</div>
+					<Image src={bag} alt='bag' />
+				</card>
+				<card className=" w-full dark:bg-[#070c19] rounded-2xl shadow-2xl px-8 py-5 flex flex-col gap-6">
+					<div className='flex flex-col gap-2'>
+						<b className='text-[38px] text-[orange]'>98%</b>
+						<b className='text-[18px]'>Готовы рекомендовать нас</b>
 					</div>
-					<div>
-						<p className='text-[38px]'>200+</p>
-						<p className='text-[gray] text-[15px] -mt-2 ml-2'>
-							Реальных проектов
-						</p>
-					</div>
-				</div>
-				<div className='flex items-center gap-4 '>
-					<div
-						className='
-				inline-block
-				rounded-lg
-				p-px hover:rotate-180 duration-700
-				bg-[linear-gradient(90deg,rgb(163,14,108),rgb(147,43,152),rgb(71,21,147),rgb(163,14,108))]
-				bg-size-[300%_300%]
-				animate-[gradientMove_5s_linear_infinite]'
-					>
-						<div className='px-3 py-3 rounded-[7px] bg-[rgb(24,4,34)] text-white'>
-							<HandshakeIcon sx={{ fontSize: 35 }}></HandshakeIcon>
-						</div>
-					</div>
-					<div>
-						<p className='text-[38px]'>30+</p>
-						<p className='text-[gray] text-[15px] -mt-2 ml-2'>Партнёров</p>
-					</div>
-				</div>
+					<Image src={like} alt='like' />
+				</card>
 			</section>
 			<section className='flex flex-col gap-12 mt-10'>
 				<aside className='flex items-end justify-between'>
