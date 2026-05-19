@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import logo from "../photos/logo.png"
-import Image from "next/image";
 
 import PeopleIcon from '@mui/icons-material/People'
 import MovingIcon from '@mui/icons-material/Moving'
