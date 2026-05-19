@@ -1,4 +1,4 @@
-import logo from '@/app/photos/logo.png'
+import logo from '@/app/photos/logo3.png'
 import Image from 'next/image'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import TelegramIcon from '@mui/icons-material/Telegram'
@@ -14,7 +14,7 @@ export default function Footer() {
 			<div className='flex items-center justify-between'>
 				<div>
 					<Link href='/'>
-						<Image className='w-17.5' src={logo} alt='logo'></Image>
+						<Image className='w-22' src={logo} alt='logo'></Image>
 					</Link>
 				</div>
 				<ul className='flex items-center gap-5 text-gray-400'>
@@ -35,13 +35,13 @@ export default function Footer() {
 					</Link>
 				</ul>
 				<div className='flex items-center gap-4'>
-					<InstagramIcon></InstagramIcon>
-					<TelegramIcon></TelegramIcon>
-					<InstagramIcon></InstagramIcon>
-					<TelegramIcon></TelegramIcon>
+					<InstagramIcon sx={{ color: 'var(--foreground)' }}></InstagramIcon>
+					<TelegramIcon sx={{ color: 'var(--foreground)' }}></TelegramIcon>
+					<InstagramIcon sx={{ color: 'var(--foreground)' }}></InstagramIcon>
+					<TelegramIcon sx={{ color: 'var(--foreground)' }}></TelegramIcon>
 				</div>
 			</div>
-			<div className='h-0.5 rounded-full w-full bg-[#3a0f4c]'></div>
+			<hr/>
 			<div>
 				<i className='text-[15px] text-gray-400'>
 					© 2024 IT Academy. Все права защищены.
