@@ -41,7 +41,7 @@ export default function Footer() {
 					<TelegramIcon sx={{ color: 'var(--foreground)' }}></TelegramIcon>
 				</div>
 			</div>
-			<hr/>
+			<div className='h-px bg-black dark:bg-white'/>
 			<div>
 				<i className='text-[15px] text-gray-400'>
 					© 2024 IT Academy. Все права защищены.
