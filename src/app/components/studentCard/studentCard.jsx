@@ -1,21 +1,21 @@
+import Image from 'next/image'
+
 export default function StudentCard({ img, desc, name }) {
 	return (
-		<div
-			className="
-				w-[33%]
-				flex
-				rounded-lg
-				p-px
-				bg-[linear-gradient(90deg,rgb(163,14,108),rgb(147,43,152),rgb(71,21,147),rgb(163,14,108))]
-				bg-size-[300%_300%]
-				hover:scale-105 duration-300
-				animate-[gradientMove_5s_linear_infinite]
-			"
-		>
-			<div className="w-full flex flex-col px-3 py-3 rounded-[7px] bg-[rgb(24,4,34)]">
+		// <div
+		// 	className="
+		// 		inline-block
+		// 		rounded-lg hover:scale-105 duration-300
+		// 		p-px
+		// 		bg-[linear-gradient(90deg,rgb(5,3,18),gray,white,gray,rgb(5,3,18))]
+		// 		bg-size-[300%_300%]
+		// 		animate-[gradientMove_5s_linear_infinite]
+		// 	"
+		// >
+			<div className="w-full flex flex-col px-3 py-3 rounded-[7px] dark:bg-[#070c19] bg-white shadow-xl">
 				<div className="flex items-start gap-3">
-					<div className="flex items-center justify-center bg-gray-500 p-4 rounded-full">
-						{img}
+					<div className="w-15 h-15 rounded-full">
+						<Image className='w-15 h-15 rounded-full' src={img} alt='olimjon'></Image>
 					</div>
 
 					<div>
@@ -26,7 +26,7 @@ export default function StudentCard({ img, desc, name }) {
 						</p>
 					</div>
 				</div>
-			</div>
+			{/* </div> */}
 		</div>
 	)
 }
