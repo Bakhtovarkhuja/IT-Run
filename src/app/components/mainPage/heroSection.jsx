@@ -8,7 +8,7 @@ export default function HeroSection(){
 	return (
 		<section>
 				<div className='max-w-300 mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='grid lg:grid-cols-2 gap-16 items-center'>
+					<div className='flex justify-between items-center flex-col lg:flex-row gap-10 lg:gap-20'>
 						<div>
 							<div className='inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-amber-600 dark:border-cyan-500/25 dark:bg-cyan-500/8 dark:text-cyan-400 text-xs font-semibold mb-6 uppercase tracking-widest'>
 								<span className='w-1.5 h-1.5 rounded-full bg-amber-600 dark:bg-cyan-400 animate-pulse' />
@@ -16,7 +16,7 @@ export default function HeroSection(){
 							</div>
 							<h1 className='text-4xl sm:text-5xl lg:text-5xl font-bold text-foreground leading-tight mb-6'>
 								Программирование —
-								<span className='bg-gradient-to-r text-[#ff7b00] bg-clip-text '>
+								<span className='bg-linear-to-r text-[#ff7b00] bg-clip-text '>
 									{`язык будущего`}
 								</span>
 								<span>{`/>`}</span>
@@ -25,7 +25,7 @@ export default function HeroSection(){
 								{/* Умение программировать так же важно, как умение читать. Это требование рынка и нового мира. <strong className='text-black dark:text-[white]'>«Новый Алгоритм»</strong> — это место, где молодёжь Таджикистана открывает для себя IT. */}
 								От первого кода до первой работы в tech.
 							</p>
-							<div className='flex flex-wrap gap-4 mb-10'>
+							<div className='flex flex-col sm:flex-row gap-4 mb-10'>
 								<Button2>
 									Начать обучение
 									<ArrowForwardIcon></ArrowForwardIcon>
@@ -33,7 +33,7 @@ export default function HeroSection(){
 								<Button>Смотреть программы</Button>
 							</div>
 
-							<div className='flex items-center gap-4'>
+							<div className='flex flex-col sm:flex-row gap-4'>
 								<div className='flex -space-x-2'>
 									{[1, 2, 3, 4, 5].map(i => (
 										<div
@@ -55,7 +55,7 @@ export default function HeroSection(){
 							</div>
 						</div>
 						<div
-							className={`reveal hidden lg:flex items-center justify-center`}
+							className={`reveal w-[80%] lg:w-full flex items-center justify-center`}
 							style={{ transitionDelay: '150ms' }}
 						>
 							<div className='relative w-95 h-95'>

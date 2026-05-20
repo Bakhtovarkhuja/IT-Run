@@ -6,15 +6,15 @@ import Button2 from '../components/buttons/button2'
 
 export default function Page() {
 	return (
-		<div className='max-w-300 m-auto mt-25 mb-10 '>
+		<div className='max-w-300 m-auto mt-25 mb-10 px-5'>
 			<div>
 				<h1 className='text-[48px]'>Контакты</h1>
 				<p className='text-[gray] text-[18px]'>
 					Есть вопросы? Мы всегда на связи!
 				</p>
 			</div>
-			<section className='flex items-start gap-10'>
-				<aside className='w-[35%]'>
+			<section className='flex flex-col md:flex-row gap-2 md:gap-10'>
+				<aside className='md:w-[35%]'>
 					<card className='dark:bg-[#070c19] bg-white rounded-2xl p-7 mt-5 text-white flex flex-col gap-5 shadow-xl'>
 						<div className='flex items-start gap-2'>
 							<LocationOnOutlinedIcon
@@ -50,7 +50,7 @@ export default function Page() {
 						</div>
 					</card>
 				</aside>
-				<aside className='dark:bg-[#070c19] bg-white rounded-2xl p-7 mt-5 text-white flex flex-col gap-5 shadow-xl w-[65%] items-end'>
+				<aside className='dark:bg-[#070c19] bg-white rounded-2xl p-7 mt-5 text-white flex flex-col gap-5 shadow-xl md:w-[65%] items-end'>
 					<div className='flex items-center gap-5 w-full'>
 						<input
 							type='text'
@@ -65,7 +65,7 @@ export default function Page() {
 					</div>
 					<textarea
 						placeholder='Сообщения...'
-						className='border-2 rounded-xl outline-0 px-4 py-3 w-full min-h-32 dark:text-white dark:border text-black'
+						className='border-2 rounded-xl outline-0 px-4 py-3 w-full  min-h-28 md:min-h-40 lg:min-h-32 dark:text-white dark:border text-black'
 					></textarea>
 					<Button2>Регистрация</Button2>
 				</aside>
