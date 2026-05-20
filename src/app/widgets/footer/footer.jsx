@@ -11,13 +11,13 @@ export default function Footer() {
 			max-w-300 m-auto
 	rounded-2xl py-2 flex flex-col gap-3'
 		>
-			<div className='flex items-center justify-between'>
+			<div className='flex flex-col gap-5 md:flex-row md:items-center md:justify-between'>
 				<div>
 					<Link href='/'>
 						<Image className='w-22' src={logo} alt='logo'></Image>
 					</Link>
 				</div>
-				<ul className='flex items-center gap-5 text-gray-400'>
+				<ul className='flex px-5 md:flex-row flex-col gap-3 md:gap-5 text-gray-400'>
 					<Link href='/courses'>
 						<li>Курсы</li>
 					</Link>
@@ -34,7 +34,7 @@ export default function Footer() {
 						<li>Контакты</li>
 					</Link>
 				</ul>
-				<div className='flex items-center gap-4'>
+				<div className='flex px-5 items-center gap-4'>
 					<InstagramIcon sx={{ color: 'var(--foreground)' }}></InstagramIcon>
 					<TelegramIcon sx={{ color: 'var(--foreground)' }}></TelegramIcon>
 					<InstagramIcon sx={{ color: 'var(--foreground)' }}></InstagramIcon>
@@ -42,7 +42,7 @@ export default function Footer() {
 				</div>
 			</div>
 			<div className='h-px bg-black dark:bg-white'/>
-			<div>
+			<div className='mx-5 mb-5 flex justify-center md:justify-start'>
 				<i className='text-[15px] text-gray-400'>
 					© 2024 IT Academy. Все права защищены.
 				</i>
