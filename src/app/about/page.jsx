@@ -1,30 +1,23 @@
 "use client";
 
+import 'swiper/css'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, FreeMode } from 'swiper/modules'
 import { useState, useEffect, useRef } from "react";
-
-import PeopleIcon from '@mui/icons-material/People'
-import MovingIcon from '@mui/icons-material/Moving'
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight'
 import HandshakeIcon from '@mui/icons-material/Handshake'
+import PublicIcon from '@mui/icons-material/Public';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import RadarIcon from '@mui/icons-material/Radar';
 
 
-// --- Animated counter hook ---
-function useCounter(target, duration = 2000, start = false) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    if (!start) return;
-    let startTime = null;
-    const step = (timestamp) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.floor(eased * target));
-      if (progress < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  }, [target, duration, start]);
-  return count;
-}
+import it from '@/app/photos/logo3.png'
+import eskhata from '@/app/photos/eskhata.png'
+import alif from '@/app/photos/alif.png'
+import wilddberis from '@/app/photos/widdberis.png'
+import avito from '@/app/photos/avito.png'
+import ds from '@/app/photos/ds.png'
+import Image from 'next/image';
+
 
 // --- Intersection observer hook ---
 function useInView(threshold = 0.2) {
@@ -37,14 +30,6 @@ function useInView(threshold = 0.2) {
   }, [threshold]);
   return [ref, inView];
 }
-
-// --- Stats ---
-const stats = [
-  { value: 1500, suffix: "+", label: "Учеников обучено", icon: <PeopleIcon /> },
-  { value: 300, suffix: "+", label: "IT-специалистов выпущено", icon: <MovingIcon /> },
-  { value: 150, suffix: "+", label: "Трудоустроено", icon: <KeyboardDoubleArrowRightIcon /> },
-  { value: 4, suffix: "", label: "Года работы", icon: <HandshakeIcon /> },
-];
 
 // --- Partners ---
 const partners = [
@@ -59,10 +44,7 @@ const employers = [
   "Компания Ливо", "Хумо Лаб",
 ];
 
-const courses = [
-  "PHP", "Android (Kotlin)", "C#", "Python",
-  "WordPress", "Figma", "Data Analytics",
-];
+
 
 // --- Timeline ---
 const timeline = [
@@ -96,77 +78,16 @@ const timeline = [
   },
 ];
 
-// --- Stat Card ---
-// function StatCard({ stat, index }) {
-//   const [ref, inView] = useInView();
-//   const count = useCounter(stat.value, 2200, inView);
-//   return (
-//     <div
-//       ref={ref}
-//       className="relative rounded-2xl border border-white/8 bg-white/[0.03] p-6 sm:p-8 text-center group hover:border-white/20 transition-all duration-300 hover:-translate-y-1"
-//       style={{ animationDelay: `${index * 100}ms` }}
-//     >
-//       <div className={`text-4xl sm:text-5xl font-black mb-2 tabular-nums ${stat.color}`}>
-//         {count.toLocaleString()}{stat.suffix}
-//       </div>
-//       <div className="text-slate-400 text-sm font-medium">{stat.label}</div>
-//     </div>
-//   );
-// }
-
 // --- Main Page ---
 export default function Page() {
-  const [heroRef, heroIn] = useInView(0.1);
 
   return (
     <div className="min-h-screen mt-10 text-white overflow-x-hidden" style={{ fontFamily: "'DM Sans', system-ui, sans-serif" }}>
 
-      {/* Google Font */}
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap');
-        .syne { font-family: 'Syne', sans-serif; }
-        .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .reveal.in { opacity: 1; transform: translateY(0); }
-        .line-draw { stroke-dasharray: 800; stroke-dashoffset: 800; transition: stroke-dashoffset 2s ease; }
-        .line-draw.in { stroke-dashoffset: 0; }
-        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
-        @keyframes spin-slow { to { transform: rotate(360deg); } }
-        @keyframes pulse-ring { 0%{transform:scale(1);opacity:.4} 100%{transform:scale(1.8);opacity:0} }
-        .float { animation: float 6s ease-in-out infinite; }
-        .spin-slow { animation: spin-slow 20s linear infinite; }
-        .ticker { display: flex; gap: 2rem; animation: ticker 25s linear infinite; white-space: nowrap; }
-        @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-        ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #06090f; } ::-webkit-scrollbar-thumb { background: #1e2940; border-radius: 4px; }
-      `}</style>
-
-      {/* ── HERO ── */}
-
-
-      {/* ── STATS ── */}
 
       {/* ── MISSION ── */}
       <MissionSection />
-      {/* <section className='max-w-300 mx-auto flex items-center justify-between border rounded-2xl border-white/8 bg-gradient-to-br from-white/[0.04 backdrop-blur-xl px-18 py-5'>
-        {
-          stats.map((e, index) => {
-            return (
-              <div className='flex items-center gap-4 '>
-                <div
-                  className='inline-block rounded-lg p-px hover:rotate-180 duration-700 bg-[linear-gradient(90deg,rgb(163,14,108),rgb(147,43,152),rgb(71,21,147),rgb(163,14,108))] bg-size-[300%_300%] animate-[gradientMove_5s_linear_infinite]'
-                >
-                  <div className='px-3 py-3 rounded-[7px] bg-[rgb(24,4,34)] text-white'>
-                    {e.icon}
-                  </div>
-                </div>
-                <div>
-                  <p className='text-[38px]'>{e.value}</p>
-                  <p className='text-[gray] text-[15px] -mt-2'>{e.label}</p>
-                </div>
-              </div>
-            )
-          })
-        }
-      </section> */}
+
 
       {/* ── TIMELINE ── */}
       <TimelineSection />
@@ -199,7 +120,7 @@ function MissionSection() {
               </svg>
               <p className="text-3xl sm:text-4xl text-[black] dark:text-[white] font-bold  pl-6">
                 За программированием —
-                <span className="text-[#ff7b00af]">будущее</span> <span>{`/>`}</span>
+                <span className="text-[#ff7b00]">будущее</span> <span>{`/>`}</span>
               </p>
             </blockquote>
             <p className="text-[gray] dark:text-slate-400 leading-relaxed mt-8 text-base sm:text-lg">
@@ -209,14 +130,13 @@ function MissionSection() {
             {/* Highlight cards */}
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { icon: "🎯", text: "Развитие логики и алгоритмического мышления" },
-                { icon: "💼", text: "Трудоустройство выпускников 18+" },
-                { icon: "🌐", text: "Встречи в университетах и школах города" },
-                { icon: "🤝", text: "Гранты и международные проекты" },
+                { icon: <RadarIcon fontSize="large" className="text-[#ff7b00]" />, text: "Развитие логики и алгоритмического мышления" },
+                { icon: <BusinessCenterIcon fontSize="large" className="text-[#ff7b00]" />, text: "Трудоустройство выпускников 18+" },
+                { icon: <PublicIcon fontSize="large" className="text-[#ff7b00]" />, text: "Встречи в университетах и школах города" },
+                { icon: <HandshakeIcon fontSize="large" className="text-[#ff7b00]" />, text: "Гранты и международные проекты" },
               ].map((item) => (
-                <div key={item.text} className="flex items-start gap-3 p-4 border rounded-2xl bg-[#ffffff] dark:bg-[#ffffff00] border-[gray] dark:border-white/8 from-white/[0.04
-	backdrop-blur-xl dark:hover:border-white/15 transition-colors">
-                  <span className="text-xl">{item.icon}</span>
+                <div key={item.text} className="flex items-start gap-3 p-4 dark:bg-[#070c19] bg-white rounded-2xl text-white flex flex-col gap-5 shadow-xl">
+                  <span className="">{item.icon}</span>
                   <span className="text-[black] dark:text-slate-400 text-sm leading-snug">{item.text}</span>
                 </div>
               ))}
@@ -225,17 +145,17 @@ function MissionSection() {
 
           {/* Story text */}
           <div className={`reveal ${inView ? "in" : ""} space-y-5`} style={{ transitionDelay: "200ms" }}>
-            <div className="p-6 border bg-[white] dark:bg-[#ffffff00] border-[gray] rounded-2xl dark:border-white/8  from-white/[0.04] backdrop-blur-xl">
+            <div className="p-6 dark:bg-[#070c19] bg-white rounded-2xl p-7 mt-5 text-white flex flex-col gap-5 shadow-xl rounded-2xl ">
               <p className="text-[black] dark:text-slate-300 leading-relaxed text-sm sm:text-base">
                 ООО «Новый Алгоритм» в марте 2020 года, на пике пандемии COVID-19, начала свою деятельность в области детского программирования в г. Худжанде. Показывая хорошие результаты и войдя в доверие родителей и детей, уже в августе 2020 года открыла филиал в г. Душанбе.
               </p>
             </div>
-            <div className="p-6 border bg-[white] dark:bg-[#ffffff00] border-[gray] rounded-2xl dark:border-white/8  from-white/[0.04] backdrop-blur-xl">
+            <div className="p-6 dark:bg-[#070c19] bg-white rounded-2xl p-7 mt-5 text-white flex flex-col gap-5 shadow-xl">
               <p className="text-[black] dark:text-slate-300 leading-relaxed text-sm sm:text-base">
                 До сегодняшнего дня у нас обучались более <strong className="text-[#ff7b00af]">1500 учеников-подростков</strong>, более <strong className="text-[#ff7b00af]">300 человек</strong> получили профессиональные знания по направлениям PHP, Android, C#, Python, WordPress, Figma и Data Analytics.
               </p>
             </div>
-            <div className="p-6 border bg-[white] dark:bg-[#ffffff00] border-[gray] rounded-2xl dark:border-white/8  from-white/[0.04] backdrop-blur-xl">
+            <div className="p-6 dark:bg-[#070c19] bg-white rounded-2xl p-7 mt-5 text-white flex flex-col gap-5 shadow-xl">
               <p className="text-[black] dark:text-slate-300 leading-relaxed text-sm sm:text-base">
                 Начиная с мая 2021 года мы стали сотрудничать с международными организациями и реализовали несколько проектов по предоставлению ИТ. Спрос на обучение программированию среди молодёжи растёт с каждым днём.
               </p>
@@ -315,41 +235,58 @@ function PartnersSection({ partners, employers }) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
-          {/* Strategic partners */}
-          <div className={`reveal ${inView ? "in" : ""}`} style={{ transitionDelay: "100ms" }}>
-            <h3 className="text-sm font-bold text-[blue] dark:text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
-              <span className="w-4 h-px bg-[blue] dark:bg-cyan-500" /> Стратегические партнёры
-            </h3>
-            <div className="space-y-2">
-              {partners.map((p) => (
-                <div key={p} className="flex items-center gap-3 p-3.5 border rounded-2xl border-white/8 bg-gradient-to-br from-white/[0.04
-	backdrop-blur-xl hover:border-cyan-500/20 transition-all duration-200 group">
-                  <span className="w-2 h-2 rounded-full bg-cyan-500/60 group-hover:bg-cyan-400 transition-colors flex-shrink-0" />
-                  <span className="text-slate-300 text-sm font-medium">{p}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+        <aside className='h-10'>
+          <Swiper
+            modules={[Autoplay, FreeMode]}
+            slidesPerView={5}
+            spaceBetween={20}
+            loop={true}
+            freeMode={true}
+            allowTouchMove={false}
+            speed={5000}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+            }}
+            className='w-full'
+          >
+            <SwiperSlide>
+              <div className='w-35 h-15 flex items-center justify-center'>
+                <Image className='w-25' src={it} alt='itrun' />
+              </div>
+            </SwiperSlide>
 
-          {/* Employers */}
-          <div className={`reveal ${inView ? "in" : ""}`} style={{ transitionDelay: "200ms" }}>
-            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
-              <span className="w-4 h-px bg-amber-500" /> Работодатели выпускников
-            </h3>
-            <div className="space-y-2">
-              {employers.map((e) => (
-                <div key={e} className="flex items-center gap-3 p-3.5 border rounded-2xl border-white/8 bg-gradient-to-br from-white/[0.04
-	backdrop-blur-xl hover:border-amber-500/20 transition-all duration-200 group">
-                  <span className="w-2 h-2 rounded-full bg-amber-500/60 group-hover:bg-amber-400 transition-colors flex-shrink-0" />
-                  <span className="text-slate-300 text-sm font-medium">{e}</span>
-                  <span className="ml-auto text-xs text-slate-600 group-hover:text-amber-600 transition-colors">Меморандум</span>
-                </div>
-              ))}
-            </div>
-            <p className="text-slate-600 text-xs mt-3 pl-1">...и другие партнёры по трудоустройству</p>
-          </div>
-        </div>
+            <SwiperSlide>
+              <div className='w-35 h-15 flex items-center justify-center'>
+                <Image className='w-35' src={eskhata} alt='eskhata' />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className='w-35 h-15 flex items-center justify-center'>
+                <Image className='w-35' src={wilddberis} alt='wildberries' />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className='w-35 h-15 flex items-center justify-center'>
+                <Image className='w-35' src={avito} alt='avito' />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className='w-35 h-15 flex items-center justify-center'>
+                <Image className='w-35' src={ds} alt='ds' />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className='w-35 h-15 flex items-center justify-center'>
+                <Image className='w-35' src={alif} alt='alif' />
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </aside>
       </div>
     </section>
   );

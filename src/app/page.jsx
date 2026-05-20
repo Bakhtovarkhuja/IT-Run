@@ -8,7 +8,7 @@ export default function Home() {
 		<div className='max-w-300 m-auto mt-35 mb-10 flex flex-col gap-10'>
 			<HeroSection></HeroSection>
 			<SecondSection></SecondSection>
-      <ProccesSection></ProccesSection>
+			<ProccesSection></ProccesSection>
 			<ResultStudentsSection></ResultStudentsSection>
 		</div>
 	)
