@@ -288,6 +288,7 @@ function PartnersSection({ partners, employers }) {
           </Swiper>
         </aside>
       </div>
+      <h1 className='text'>Hello</h1>
     </section>
   );
 }

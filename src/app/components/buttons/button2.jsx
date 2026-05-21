@@ -12,7 +12,7 @@ export default function Button2({ children }) {
 				bg-size-[300%_300%]
 				hover:scale-105
 				duration-300
-				text-white flex items-center gap-2
+				text-white items-center gap-2 flex justify-center
 				"
 				// animate-[gradientMove_4s_linear_infinite]
 		>
